@@ -13,6 +13,7 @@ function render (array) {
       var elCategory = elCreate('p');
       var elImg = elCreate('img');
       var elLanguage = elCreate('p');
+      var elRate = elCreate('p');
     //   var a = elCreate('a');
 
 
@@ -24,6 +25,7 @@ function render (array) {
     elImg.src = array[i].smallPoster;
     elImg.alt = 'image';
     elLanguage.textContent = `Language: ` + array[i].language;
+    elRate.textContent = array[i].imdbRating;
     // a.href = array[i].trailer;
 
 
@@ -35,6 +37,7 @@ function render (array) {
     elYear.className = 'fs-4 text-primary';
     elCategory.className = 'fs-5 text-primary';
     elLanguage.className = 'fs-6 text-success';
+    elRate.className = 'text-danger fa fa-star checked fs-4';
 
 
     // append
@@ -43,6 +46,7 @@ function render (array) {
     elCard.appendChild(elYear);
     elCard.appendChild(elCategory);
     elCard.appendChild(elLanguage);
+    elCard.appendChild(elRate);
     // elCard.appendChild(a);
 
     elDiv.appendChild(elCard);
